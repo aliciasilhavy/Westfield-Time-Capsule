@@ -1,0 +1,20 @@
+document.getElementById("toggle").onclick = function() {toggleModal()};
+
+function toggleModal() {
+  // Find the modal and overlay
+	modal = document.getElementById("modal");
+  overlay = document.getElementById("overlay");
+
+  // Open Modal
+  modal.classList.toggle("open");
+
+  // Open Overlay
+  overlay.classList.toggle("open")
+
+  // Check Anchor
+  if(modal.offsetHeight > window.innerHeight) {
+    modal.classList.toggle("anchored");
+  }
+}
+
+//document.getElementById("toggle").addEventListener('click', overlay);

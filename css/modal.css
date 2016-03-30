@@ -1,0 +1,15 @@
+#modal {
+  visibility: hidden;
+}
+
+#overlay {
+  visibility: hidden;
+}
+
+#modal.open {
+  visibility: visible;
+}
+
+#overlay.open {
+  visibility: visible;
+}
