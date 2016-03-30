@@ -117,3 +117,11 @@ header {
     margin-left: .5em;
     margin-right: .5em;
   }
+
+/* FOOTER */
+
+footer {
+  background-color: #24A064;
+  padding: 5em;
+  min-height: 400px;
+}
