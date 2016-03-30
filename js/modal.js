@@ -17,4 +17,9 @@ function toggleModal() {
   }
 }
 
+document.getElementById("overlay").onclick = function(event) {
+  overlay.classList.toggle("open")
+  modal.classList.toggle("open");
+}
+
 //document.getElementById("toggle").addEventListener('click', overlay);
