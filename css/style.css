@@ -4,6 +4,12 @@
     padding-right: 3em !important;
 }
 
+.padded-relative {
+    padding: 3em;
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+
 .framed {
   border: 15px solid #FFF;
   box-shadow: 0 0 38px rgba(0, 0, 0, 0.13);
@@ -93,4 +99,21 @@ header {
 
   #intro h2 {
     margin-top: 0;
+  }
+
+/* CONTRIBUTE */
+
+#contribute {
+  background-color: #24A064;
+  text-align: center;
+}
+
+  #contribute h2 {
+    color: white;
+  }
+
+  #contribute .button {
+    margin: 1em;
+    margin-left: .5em;
+    margin-right: .5em;
   }

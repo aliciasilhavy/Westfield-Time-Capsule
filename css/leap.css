@@ -211,3 +211,8 @@ a.button {
     background-color: #14330b; }
     a.button.dark:hover {
       background-color: #255D14; }
+  a.button.white {
+    background-color: white;
+    color: #16a27c; }
+    a.button.white:hover {
+      background-color: #e6e6e6; }
