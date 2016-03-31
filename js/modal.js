@@ -22,4 +22,10 @@ document.getElementById("overlay").onclick = function(event) {
   modal.classList.toggle("open");
 }
 
-//document.getElementById("toggle").addEventListener('click', overlay);
+// Autofill Date
+var d = new Date();
+
+var months = ["January ","February ","March ","April ","May ","June ","July ","August ","September ","October ","November ","December "];
+var month = months[d.getMonth()];
+
+document.getElementById('date').value = month + d.getDate() + ", " + d.getFullYear();
