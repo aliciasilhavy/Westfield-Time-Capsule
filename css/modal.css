@@ -1,9 +1,31 @@
 #modal {
-  visibility: hidden;
-}
+  position: fixed;
+    z-index: 10000;
+    top: 100%;
+    transform: translate(-50%, 0);
+    left: 50%;
+  margin-top: 30px;
+
+    -webkit-transition: 1000ms ease;
+       -moz-transition: 1000ms ease;
+        -ms-transition: 1000ms ease;
+         -o-transition: 1000ms ease;
+            transition: 1000ms ease;
+  }
+  @media (max-width: 767px) {
+    #modal {
+      width: 100%; } }
+
+  #modal .wrap {
+    background-color: white;
+    border: 30px solid #e6e6e6;
+  }
+
+  /*#modal img {
+    width: 300px;
+  }*/
 
 #overlay {
-  visibility: hidden;
   position: fixed;
   z-index: 9998;
   top: 0;
@@ -15,20 +37,37 @@
   height: 100%;
   height: 100vh;
 
-  -webkit-transition: 1ms opacity ease;
-     -moz-transition: 1ms opacity ease;
-      -ms-transition: 1ms opacity ease;
-       -o-transition: 1ms opacity ease;
-          transition: 1ms opacity ease;
+  -webkit-transition: 1000ms all ease;
+     -moz-transition: 1000ms all ease;
+      -ms-transition: 1000ms all ease;
+       -o-transition: 1000ms all ease;
+          transition: 1000ms all ease;
 
-  background: rgba(0,0,0,.6);
+  background: #333;
+  background-image: url("../images/noise.gif");
+  background-blend-mode: multiply;
+
+  visibility: hidden;
 }
 
 #modal.open {
-  visibility: visible;
+  -webkit-transform: translate(-50%, -100%);
+     -moz-transform: translate(-50%, -100%);
+       -o-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+#modal.open.anchored {
+  max-height: 100%;
+  max-height: 100vh;
+}
+
+#modal.open.anchored .content {
+  overflow-y: scroll;
 }
 
 #overlay.open {
   visibility: visible;
-  opacity: 1;
+  opacity: .35;
 }
