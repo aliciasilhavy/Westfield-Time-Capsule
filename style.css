@@ -1,0 +1,185 @@
+.padded {
+	padding: 150px;
+	padding-left: 3em !important;
+	padding-right: 3em !important;
+}
+.framed {
+	border: 15px solid #FFF;
+	box-shadow: 0 0 38px rgba(0, 0, 0, 0.13);
+}
+
+/* NAVIGATION */
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	text-align: center;
+}
+.history,
+.message,
+.future {
+	padding-bottom: 3px;
+	position: relative;
+	display: inline-block;
+	font-family: "Roboto Slab", "Helvetica", sans-serif;
+	margin-left: 25px;
+	margin-right: 25px;
+	font-size: 20px;
+	font-weight: 300;
+	margin-top: 15px;
+}
+
+/* this stuff is for the underline transition */
+
+.history:before,
+.message:before,
+.future:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 0;
+	transition: width 0s ease, background .5s ease;
+}
+.history:after,
+.message:after,
+.future:after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 3px;
+	width: 0;
+	background: #16a27c;
+	transition: width .5s ease;
+}
+.history:hover:before,
+.message:hover:before,
+.future:hover:before {
+	width: 100%;
+	background: #16a27c;
+	transition: width .5s ease;
+}
+.history:hover:after,
+.message:hover:after,
+.future:hover:after {
+	width: 100%;
+	background: transparent;
+	transition: all 0s ease;
+}
+#banner {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 150px;
+	height: 180px;
+	background-color: white;
+	background-image: url("../images/logo_notext.png");
+	background-position: 45% center;
+	background-size: 60%;
+	/*background-position: 16px center;
+    background-size: 110px;*/
+	background-repeat: no-repeat;
+	box-shadow: 0 0 38px rgba(0, 0, 0, 0.13);
+}
+#links {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	height: 60px;
+	background: white;
+	/*border-radius: 7px 7px 0px 0px;*/
+	box-shadow: 0 0 38px rgba(0, 0, 0, 0.13);
+}
+
+/* HEADER */
+
+header {
+	height: 100%;
+	height: 100vh;
+	/*background-image: url("../images/paper.png"), url("../images/city.jpeg");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-position: top;
+    background-blend-mode: screen;*/
+	background-image: url("../images/city.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	background-blend-mode: screen;
+}
+.noise {
+	background-image: url("../images/noise.gif");
+	opacity: .1;
+}
+#forHeader.noise {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* INTRODUCTION */
+
+#intro {
+	background-color: #F2F2F2;
+}
+#intro .left {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+#intro h2 {
+	margin-top: 0;
+}
+
+/* this is the CSS for the slider, it is very delicate */
+
+.slider-mask {
+	width: 400px;
+	height: 225px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.AB-slidebar {
+	position: relative;
+	width: 967px;
+	height: 540px;
+	right: 4px;
+	overflow: hidden;
+}
+.slider-aft,
+.slider-bef {
+	position: absolute;
+	top: 0px;
+	left: 4px;
+	overflow: hidden;
+}
+.handle-wrapper {
+	position: relative;
+	width: 8px;
+	height: 540px;
+	left: 952px;
+	z-index: 10;
+}
+.slider-bar {
+	width: 1px;
+	height: 540px;
+	position: absolute;
+	left: 4px;
+	background-color: #16a27c;
+	opacity: .7;
+}
+.slider-handle {
+	position: relative;
+	top: 77.5px;
+	left: -14px;
+	z-index: 100;
+}
